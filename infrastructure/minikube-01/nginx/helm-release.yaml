@@ -15,4 +15,5 @@ spec:
         namespace: flux-system
       interval: 1m
     values:
-      replicaCount: 3
+      controller:
+        replicaCount: 3
