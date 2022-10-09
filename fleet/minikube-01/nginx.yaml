@@ -10,3 +10,5 @@ spec:
     name: flux-system
   path: ./infrastructure/nginx
   prune: true
+patchesStrategicMerge:
+  - nginx-values.yaml
