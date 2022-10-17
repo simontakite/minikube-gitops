@@ -8,5 +8,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/minikube-02/nginx
+  path: ./infrastructure/nginx
   prune: true
