@@ -10,3 +10,17 @@ spec:
     name: flux-system
   path: ./infrastructure/nginx
   prune: true
+  patchesStrategicMerge:
+    - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+      kind: HelmRelease
+      metadata:
+        name: ingress-nginx
+        namespace: ingress-system
+      spec:
+        values:
+          controller:
+            replicaCount: 5
+            service:
+              loadBalancerIP: 192.168.58.100
+            admissionWebhooks:
+              enabled: false
