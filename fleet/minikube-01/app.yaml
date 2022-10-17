@@ -11,5 +11,13 @@ spec:
   path: ./infrastructure/app
   prune: true
   patchesStrategicMerge:
-    - spec:
+    - apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: web
+        namespace: mywebapp
+        labels:
+          name: web
+          app: mywebapp
+      spec:
         replicas: 1
