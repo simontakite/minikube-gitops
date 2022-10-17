@@ -8,7 +8,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/minikube-01/app
+  path: ./infrastructure/app
   prune: true
   patchesStrategicMerge:
     - apiVersion: apps/v1
