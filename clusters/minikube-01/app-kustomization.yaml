@@ -1,0 +1,23 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: app
+  namespace: flux-system
+spec:
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/app
+  prune: true
+  patchesStrategicMerge:
+    - apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: web
+        namespace: mywebapp
+        labels:
+          name: web
+          app: mywebapp
+      spec:
+        replicas: 1
