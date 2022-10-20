@@ -7,4 +7,9 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: kawuku
+  name: minside
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minside-test
