@@ -10,8 +10,3 @@ spec:
     name: flux-system
   path: ./infrastructure/namespaces
   prune: true
-  patchesStrategicMerge:
-    - apiVersion: v1
-      kind: Namespace
-      metadata:
-        name: kawuku
